@@ -1,0 +1,60 @@
+.primaryFont {
+    font-family:'Amaranth',sans-serif;
+}
+.secondaryFont {
+    font-family:'Open Sans', sans-serif;
+}
+.secondaryBColor{
+    background:#FF7F50; /*orange*/
+    color: black;
+}
+.primaryBColor{
+    background:#D7E8F0; /*ligh blue*/
+    color: black;
+}
+.tertiaryBColor{
+    background:#555555; /*dark gray*/
+}
+
+.close {
+    display: hidden;
+}
+.open{
+    display: block;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 4px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbarHide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbarHide {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
