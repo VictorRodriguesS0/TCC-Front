@@ -15,8 +15,8 @@ export default function Admin (){
     return (
         <>
             <header className="max-w-[850px] h-auto flex justify-between px-2 md:px-0 py-2 font-bold m-4 md:mx-auto  md:w-[700px] lg:w-[850px]">
-				<h1>Weather Forecast</h1>
-				<p onClick={navigateToLoginSignUp} className="cursor-pointer">Login / SignUp</p>
+				<h1>Previsão do Tempo</h1>
+				<p onClick={navigateToLoginSignUp} className="cursor-pointer">Login / Registro</p>
             </header>
 				{/*main body*/}
 				<main className="max-w-[850px] h-auto grid overflow-hidden md:grid-rows-2 md:grid-cols-2 grid-rows-4 grid-cols-1 md:gap-4 px-2 md:px-0 secondaryFont m-4 lg:mx-auto gap-16 md:m-[20px]" >

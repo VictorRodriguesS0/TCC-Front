@@ -2,7 +2,7 @@ export default function Tomorrow ({daily, cityName}){
     return (
         <>
         {/* heading */}
-		<h3 className="text-lg text-start font-bold pb-2 w-full md:w-[300px]">Tomorrow</h3>
+		<h3 className="text-lg text-start font-bold pb-2 w-full md:w-[300px]">Amanhã</h3>
 		{/* heading cnt-4 tomorrow */}
 		<div className="md:h-[90%] h-full w-full md:w-[300px] rounded-md primaryBColor flex flex-col justify-start items-start p-4">
 			<h3 className="font-bold text-lg mb-3">{cityName ? <>{cityName[1]}, {cityName[0]}</>:<>load</>}</h3>

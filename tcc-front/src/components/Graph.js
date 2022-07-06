@@ -63,7 +63,7 @@ export default function Graph ({hourly}){
     return (
         <>
             {/*heading*/}
-            <h3 className="text-lg font-bold pb-2 w-full text-start">Predictions for today</h3>
+            <h3 className="text-lg font-bold pb-2 w-full text-start">Previsões para hoje</h3>
             {/* heading cnt-1 current weather */}
 			<div className="flex flex-col md:flex-row justify-center items-center md:h-[88%] h-auto w-full  md:w-[400px] lg:w-[500px] cursor-pointer">
                 <Line data={data} options={options}/>

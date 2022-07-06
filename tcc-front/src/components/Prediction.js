@@ -4,7 +4,7 @@ export default function Prediction ({daily}){
     return (
         <>
             {/* heading */}
-			<h3 className="text-lg text-start font-bold pb-2 md:w-[60%] w-full">Weather Prediction</h3>
+			<h3 className="text-lg text-start font-bold pb-2 md:w-[60%] w-full">Previsão do tempo</h3>
 			{/* heading cnt-2 weather prediction */}
 		    <div className="flex flex-col justify-center items-center md:h-[90%] h-auto md:w-3/4 w-full" style={{'gap':'1rem'}}>
 			{/* day 1 */}

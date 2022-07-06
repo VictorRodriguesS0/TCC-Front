@@ -126,7 +126,7 @@ export default function Home (){
         <>
             {/* header */}
 				<header className="max-w-[800px] md:m-4 lg:mx-auto h-auto flex justify-between px-2 md:px-0 py-2 mx-auto font-bold">
-					<h1 style={{'alignSelf':'center'}}>Weather Forecast</h1>
+					<h1 style={{'alignSelf':'center'}}>Previsão do Tempo</h1>
 					{/* search bar */}
 					<form onSubmit={handleSubmit} className="flex flex-col sm:flex-row justify-center items-center sm:justify-between w-1/2 cursor-pointer">
 						<input 

@@ -45,7 +45,7 @@ export default function Login (){
     return (
         <div className="flex flex-col justify-center items-center p-2 max-w-96 h-screen shadow-md">
             <h1 className='text-xl font-bold mb-2 primaryFont'>
-                <p>Login / SignUp</p>
+                <p>Login / Registro</p>
                 <p className="text-xs font-light text-center">Admin</p>
             </h1>
             <p className="py-2 px-4 bg-orange-500 rounded-lg mb-2 secondaryFont secondaryBColor">Google</p>
