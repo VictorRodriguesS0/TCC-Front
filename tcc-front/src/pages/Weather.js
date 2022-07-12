@@ -39,7 +39,7 @@ export default function Home (){
         console.log(longitude)
 
       // OPEN WEATHER MAP URL ONECALL
-        const url_1 = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely&units=metric&appid=${API_KEY}`;
+        const url_1 = `http://localhost:3333/medicao/11bd6409-3f93-460f-9693-430ac321b549`;
       
       //getting url_1 data
         axios
@@ -47,13 +47,30 @@ export default function Home (){
             .then((res) => {
           // console.log(res);
           // UPDATING THE INDIVIDUAL STATES
-            setWeather(res.data.current);
-            setDaily(res.data.daily);
-            sethourly(res.data.hourly);
+          console.log(res.data.temperaturaAr)
+            setWeather(res.data);
+            // setDaily(res.data.daily);
+            // sethourly(res.data.hourly);
             })
             .catch((err) => {
             console.log(err);
             });
+
+        const url_2 = `http://localhost:3333/previsao/11bd6409-3f93-460f-9693-430ac321b549`;
+  
+        //getting url_1 data
+          axios
+              .get(url_2)
+              .then((res) => {
+            // UPDATING THE INDIVIDUAL STATES
+            console.log('>>>>', res.data[0])
+              // setWeather(res.data);
+            setDaily(res.data);
+              // sethourly(res.data.hourly);
+              })
+              .catch((err) => {
+              console.log(err);
+              });
       }
         // FUNCTION FOR GETTING WEATHER ACCORDING TO USER'S CURRENT LOCATION
     function CurrentLocation() {
@@ -147,20 +164,20 @@ export default function Home (){
 				{/* Main body */}
 				<main className="max-w-[850px] h-auto grid overflow-hidden md:grid-rows-2 md:grid-cols-2 grid-rows-4 grid-cols-1 md:gap-4 m-4 md:m-4 lg:mx-auto px-2 pb-2 md:px-0 secondaryFont">
             {/* wrapper-1 */} 
-				    <div className="md:h-[300px] h-auto flex flex-col justify-center md:block items-center">
-				    <Current cityName={cityName} weather={weather}/>
+				    <div className="md:h-[435px] h-auto flex flex-col justify-center md:block items-center">
+				      <Current cityName={cityName} weather={weather}/>
 				    </div>
 				    {/* wrapper-2 */}
-				    <div className="flex flex-col md:justify-end justify-center md:items-end items-center h-fit md:h-[300px]">
-				    <Prediction daily={daily}/>
+            <div className=" flex flex-col md:justify-end justify-center md:items-end items-center h-fit p-2 md:p-0 mt-0">
+				      <Tomorrow daily={daily} cityName={cityName}/>
 				    </div>
 				    {/* wrapper-3 */}
 				    <div className="w-full sm:w-[300px] md:w-[500px] h-fit md:h-auto flex flex-col justify-center md:block items-center">
-				        <Graph hourly={hourly}/>
+				        <Graph hourly={daily}/>
 				    </div>
 				    {/* wrapper-4 */}
-				    <div className="flex flex-col md:justify-end justify-center md:items-end items-center p-2 md:p-0 mt-0">
-				    <Tomorrow daily={daily} cityName={cityName}/>
+            <div className="flex flex-col md:justify-end justify-center md:items-end items-center h-fit md:h-[300px]">
+				      <Prediction daily={daily}/>
 				    </div>
 				</main>
             

@@ -8,20 +8,24 @@ export default function Current ({cityName, weather}){
 				{/* current details cnt */}
 				<div className="flex flex-col w-2/3 pl-2 justify-center items-center md:justify-start md:items-start order-2 md:order-1">
 					<h3 className="font-bold text-lg mb-1 hidden md:block PrimaryFont">{cityName ? <>{cityName[1]}, {cityName[0]}</>:<div className="lds-dual-ring"></div>}</h3>
-					<h3 className="font-bold text-5xl mb-1">{weather.temp ? <>{weather.temp.toFixed(0)}<sup>o</sup>C</>:<div className="lds-dual-ring"></div>}</h3>
-					<p className="font-light mb-3" style={{'fontSize':'1rem'}}>{weather.weather ? <>{weather.weather.map(x=>{return x.main})}</>:<div className="lds-dual-ring"></div>}</p>
+					<h3 className="font-bold text-5xl mb-1">{weather.choveuHoje ? <>{weather.choveuHoje}</>:<div className="lds-dual-ring"></div>}</h3>
+					{/* <p className="font-light mb-3" style={{'fontSize':'1rem'}}>{weather.weather ? <>{weather.weather.map(x=>{return x.main})}</>:<div className="lds-dual-ring"></div>}</p> */}
 					<div className="w-full h-auto flex items-center justify-center md:justify-start text-center">
 						<div className="bg-white px-1 py-2 rounded-lg mr-2">
 							<p style={{'fontSize':'0.8rem'}}>Pressão</p>
-							<p style={{'fontSize':'1rem'}}>{weather ? <>{weather.pressure}</>:<div className="lds-dual-ring"></div>}hpa</p>
+							<p style={{'fontSize':'1rem'}}>{weather ? <>{weather.pressaoAtmosferica}</>:<div className="lds-dual-ring"></div>}hpa</p>
 						</div>
 						<div className="bg-white px-1 py-2 rounded-lg mr-2">
 							<p style={{'fontSize':'0.8rem'}}>Umidade</p>
-							<p style={{'fontSize':'1rem'}}>{weather ? <>{weather.humidity}</>:<div className="lds-dual-ring"></div>}%</p>
+							<p style={{'fontSize':'1rem'}}>{weather ? <>{weather.umidadeRelativa}</>:<div className="lds-dual-ring"></div>}%</p>
 						</div>
 						<div className="bg-white px-1 py-2 rounded-lg mr-2">
 							<p style={{'fontSize':'0.8rem'}}>Vento</p>
-							<p style={{'fontSize':'1rem'}}>{weather.wind_speed ? <>{weather.wind_speed.toFixed(1)}</>:<div className="lds-dual-ring"></div>}m/hr</p>
+							<p style={{'fontSize':'1rem'}}>{weather.velocidadeVento ? <>{weather.velocidadeVento.toFixed(1)}</>:<div className="lds-dual-ring"></div>}m/hr</p>
+						</div>
+						<div className="bg-white px-1 py-2 rounded-lg mr-2">
+							<p style={{'fontSize':'0.8rem'}}>Temperatura</p>
+							<p style={{'fontSize':'1rem'}}>{weather.temperaturaAr ? <>{weather.temperaturaAr.toFixed(0)}<sup>o</sup>C</>:<div className="lds-dual-ring"></div>}</p>
 						</div>
 					</div>
 				</div>
